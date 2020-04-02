@@ -21,7 +21,7 @@ class WeatherModel {
             '$openWeatherMapURL?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
 
     var weatherData = await networkHelper.getData();
-
+//    print('Got weather data: $weatherData');
     return weatherData;
   }
 

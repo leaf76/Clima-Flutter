@@ -13,10 +13,14 @@ class Location {
           desiredAccuracy: LocationAccuracy.low);
       latitude = position.latitude;
       longitude = position.longitude;
+      print('Locate Latitude: $latitude, Longitude: $longitude');
     } catch (e) {
       print(e);
       position = await Geolocator()
           .getLastKnownPosition(desiredAccuracy: LocationAccuracy.low);
+      latitude = position.latitude;
+      longitude = position.longitude;
+      print('Locate Latitude: $latitude, Longitude: $longitude');
     }
   }
 }
